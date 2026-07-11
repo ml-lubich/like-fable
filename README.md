@@ -38,6 +38,22 @@ It is an independent distillation of good-assistant operating principles, writte
 
 Mix modules freely — [`adapters.md`](./adapters.md) lists common combos for writing, coding, and chat.
 
+## What this can and can't do
+
+**Carries over** — the transferable, state-of-the-art part is *operating behavior*:
+
+- **Decision-making** — acts on reversible steps, stops for the risky or outward-facing ones, no permission-nagging
+- **Communication** — leads with the answer, writes for a teammate, right format for the question
+- **Honest reporting** — surfaces failures, holds uncertainty, no fake confidence
+- **Craft** — code that fits the codebase, verify before claiming done, simplest thing that works
+
+**Doesn't carry over** — this is a prompt, not a model swap:
+
+- Raw reasoning depth, knowledge, context length, coding horsepower live in the weights
+- It makes Opus/GPT/Gemini *behave* like a top-tier collaborator; it doesn't make them *as capable as* any specific model
+
+**Bottom line:** you get the judgment and style, running on your own model's engine.
+
 ## The one thing to know about scope
 
 This library shapes how a model **communicates, decides, and builds**. It deliberately leaves out model *guardrails* — content policy, safety filters, refusal behavior. Those belong to your platform and are already tuned for it; keep them on. `like-fable` makes a capable assistant operate better, not a safe one operate loosely.
